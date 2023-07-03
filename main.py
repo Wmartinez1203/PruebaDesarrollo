@@ -20,7 +20,7 @@ def deduccion_endpoint(doc: document):
     }
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host='127.0.0.1', port=8024)
+    uvicorn.run(app, host='127.0.0.1', port=9066)
 
 #para cambiar el puerto
 #if __name__ == "__main__":

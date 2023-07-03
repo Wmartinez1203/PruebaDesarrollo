@@ -5,15 +5,14 @@ class document(BaseModel):
     prompt: str = ''
 def deduccion(prompt: str) -> list:
     openai.organization = "org-ZWY7hnVw2WOKBgUCbZnaiRrz"
-    openai.api_key = "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"
+    openai.api_key = "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"
     print("[PROCESANDO SU PETICION]".center(40, "-"))
 
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": """Eres un profesor de programación para niños de 5 años, genera una explicacion para el tema que se te proporciona
-        E.G: Programación        
-        -Es como armar un rompecabezas donde cada pieza forma el sistema completo"""},
+        {"role": "system", "content": """Eres una calculador factoial y das el factorial del numero que te dan si te dan un texto imprimes "sintax error"
+        """},
         {"role": "user", "content": prompt}
         ]
     )
